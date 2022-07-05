@@ -25,7 +25,8 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">update</property>
 
-
+	 	<mapping class="com.database.Classes"/> 
+		<mapping class="com.database.Teacher"/>
     </session-factory>
 
 </hibernate-configuration>

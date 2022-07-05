@@ -12,7 +12,7 @@ public class HibernatUtil {
 	public static SessionFactory getSessionFactory() {
 		Configuration configuration = new Configuration();
 		configuration.configure("hibernate.cfg.xml");
-		configuration.addAnnotatedClass(Classes.class);
+//		configuration.addAnnotatedClass(Classes.class);
 		sessionFactory = configuration.buildSessionFactory();
 		return sessionFactory;
 	}

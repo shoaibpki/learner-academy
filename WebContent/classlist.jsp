@@ -13,7 +13,7 @@
 </head>
 <body>
 	<% 
-		List<Classes> classList = ClassList.getAllClasses();
+		List<Classes> classList = ClassList.getClassList("from Classes");
 		request.setAttribute("clslist", classList);
 	%>
 	
