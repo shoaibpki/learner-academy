@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<a href="subjectlist.jsp">Show Subjects</a>
 	<a href="classlist.jsp">Show Classes</a><br>
 	<a href="teacherlist.jsp">Show Teachers</a>
 </body>

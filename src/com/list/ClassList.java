@@ -15,15 +15,24 @@ public class ClassList {
 	public ClassList() {
 		
 	}
-
+	
+//	list of all classes
 	public static List<Classes> getClassList(String qry){
 		List list  = session.createQuery(qry).list();
 		return list;
 	}
-
+	
+//	list of all teachers
 	public static List<Teacher> getTeacherList(String qry){
 		List list  = session.createQuery(qry).list();
 		return list;
 	}
+	
+//	list of all subjects
+	public static List<Subject> getSubjectList(String qry){
+		List list  = session.createQuery(qry).list();
+		return list;
+	}
+	
 
 }
