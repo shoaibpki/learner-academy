@@ -14,17 +14,12 @@ public class ClassList {
 	public ClassList() {
 		
 	}
-	static SessionFactory factory = HibernatUtil.getSessionFactory();
-	
-	static Session session = factory.openSession();
-	Transaction tx = session.beginTransaction();
-				
-	private static List<Classes> list;
-	
-				
+
 	public static List<Classes> getAllClasses(){
-		list  = session.createQuery("from Classes",Classes.class).getResultList();
+		SessionFactory factory = HibernatUtil.getSessionFactory();
+		Session session = factory.openSession();
+		List<Classes> list  = session.createQuery("from Classes").list();
+		session.close();
 		return list;
-					
 	}
 }
