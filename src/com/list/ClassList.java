@@ -18,13 +18,11 @@ public class ClassList {
 
 	public static List<Classes> getClassList(String qry){
 		List list  = session.createQuery(qry).list();
-		session.close();
 		return list;
 	}
 
 	public static List<Teacher> getTeacherList(String qry){
 		List list  = session.createQuery(qry).list();
-		session.close();
 		return list;
 	}
 
