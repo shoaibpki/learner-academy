@@ -7,29 +7,23 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 
-@Table (name="students")
+@Table
 public class Student {
 	// define and mapping table's column
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="sid")
+	@GeneratedValue(strategy=GenerationType.TABLE)
 	private int studentId;
-	
-	@Column (name="sname")
+
 	private String studentName;
-	
-	@Column (name="contact")
 	private String studentContact;
-	
-	@Column (name="address")
 	private String studentAddress;
-	
-	@Column (name="add_date")
 	private Date admissionDate;
+	
 	
 	public Student() {
 		

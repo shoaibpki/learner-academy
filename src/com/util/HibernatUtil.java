@@ -16,6 +16,7 @@ public class HibernatUtil {
 		Configuration configuration = new Configuration();
 		configuration.configure("hibernate.cfg.xml");
 //		configuration.addAnnotatedClass(Classes.class);
+//		configuration.addAnnotatedClass(StdAssignClass.class);
 		sessionFactory = configuration.buildSessionFactory();
 		
 		return sessionFactory;

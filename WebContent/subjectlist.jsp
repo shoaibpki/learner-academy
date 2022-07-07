@@ -16,11 +16,13 @@
 		List<Subject> slist = ClassList.getSubjectList("from Subject");
 		request.setAttribute("subjects", slist);
 	%>
-	<s:forEach items="subjects" var="subject">
+	<table>
+	<s:forEach items="${subjects}" var="subject">
 		<tr>
 			<td>${subject.getSubjectId()}</td>
 			<td>${subject.getSubjectName()}</td>
 		</tr>
 	</s:forEach>
+	</table>
 </body>
 </html>

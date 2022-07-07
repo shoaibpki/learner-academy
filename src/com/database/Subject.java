@@ -19,7 +19,9 @@ public class Subject {
 	@Column(name="sname")
 	private String subjectName;
 	
-	public Subject() {}
+	public Subject() {
+		
+	}
 
 	public int getSubjectId() {
 		return subjectId;
