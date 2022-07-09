@@ -1,5 +1,6 @@
 package com.database;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,11 +13,11 @@ import javax.persistence.Table;
 @Table(name="subject")
 public class Subject {
 	@Id
-	@GeneratedValue (strategy=GenerationType.IDENTITY)
-	@Column(name="sid")
+	@GeneratedValue (strategy=GenerationType.TABLE)
+	@Column(name="subjectId")
 	private int subjectId;
 	
-	@Column(name="sname")
+	@Column(name="subjectName")
 	private String subjectName;
 	
 	public Subject() {

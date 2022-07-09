@@ -11,43 +11,43 @@ import com.util.*;
 
 public class ClassList {
 	
+	static SessionFactory factory = HibernatUtil.getSessionFactory();
+	static Session session = factory.openSession();
 	public ClassList() {
 		
 	}
 	
 //	add student
-	public static void addStudent(Classes cls) {
-		SessionFactory factory = HibernatUtil.getSessionFactory();
-		Session session = factory.openSession();
+	public static void saveData(Classes cls) {
 		Transaction tx = session.beginTransaction();
 		session.clear();
 		session.update(cls);
 		tx.commit();
 	}
 	
-//	list of all classes
+//	// add data subject and teacher related class
+//	public static void saveDataSubTea(Classes cls) {
+//		Transaction tx = session.beginTransaction();
+//		session.clear();
+//		session.save(cls);
+//		tx.commit();
+//	}
+
+	//	list of all classes
 	public static List<Classes> getClassList(String qry){
-		SessionFactory factory = HibernatUtil.getSessionFactory();
-		Session session = factory.openSession();
 		List list  = session.createQuery(qry).list();
 		return list;
 	}
 	
 //	list of all teachers
 	public static List<Teacher> getTeacherList(String qry){
-		SessionFactory factory = HibernatUtil.getSessionFactory();
-		Session session = factory.openSession();
 		List list  = session.createQuery(qry).list();
 		return list;
 	}
 	
 //	list of all subjects
 	public static List<Subject> getSubjectList(String qry){
-		SessionFactory factory = HibernatUtil.getSessionFactory();
-		Session session = factory.openSession();
 		List list  = session.createQuery(qry).list();
 		return list;
 	}
-	
-
 }

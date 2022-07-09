@@ -29,6 +29,8 @@
 	 	<mapping class="com.database.Classes"/> 
 		<mapping class="com.database.Teacher"/>
 		<mapping class="com.database.Subject"/>
+ 		<mapping class="com.database.class_subject"/>
+	 	<mapping class="com.database.class_teacher"/>
     </session-factory>
 
 </hibernate-configuration>

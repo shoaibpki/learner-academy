@@ -9,7 +9,8 @@
 <body>
 	<a href="subjectlist.jsp">Show Subjects</a><br>
 	<a href="classlist.jsp">Show Classes</a><br>
-	<a href="teacherlist.jsp">Show Teachers</a>
+	<a href="teacherlist.jsp">Show Teachers</a><br>
 	<a href="Assignstoc.jsp">Assign Student to Class</a>
+	<a href="Assignctos.jsp">Assign Class to subjects</a>
 </body>
 </html>
