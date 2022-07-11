@@ -12,7 +12,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<% 
+	<% 		
+		if (session.getAttribute("uname") == null)
+		response.sendRedirect("error.jsp");
+
 		List<Teacher> teacList = ClassList.getTeacherList("from Teacher");
 		request.setAttribute("tealist", teacList);
 	%>

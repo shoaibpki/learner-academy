@@ -25,13 +25,13 @@ public class ClassList {
 		tx.commit();
 	}
 	
-//	// add data subject and teacher related class
-//	public static void saveDataSubTea(Classes cls) {
-//		Transaction tx = session.beginTransaction();
-//		session.clear();
-//		session.save(cls);
-//		tx.commit();
-//	}
+	// add user
+	public static void saveUser(Login cls) {
+		Transaction tx = session.beginTransaction();
+		session.clear();
+		session.save(cls);
+		tx.commit();
+	}
 
 	//	list of all classes
 	public static List<Classes> getClassList(String qry){
@@ -50,4 +50,11 @@ public class ClassList {
 		List list  = session.createQuery(qry).list();
 		return list;
 	}
+	
+//	list of all subjects
+	public static List<Login> getUserList(String qry){
+		List list  = session.createQuery(qry).list();
+		return list;
+	}
+	
 }

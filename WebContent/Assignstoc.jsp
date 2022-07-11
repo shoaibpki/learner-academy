@@ -13,6 +13,9 @@
 </head>
 <body>
 	<%
+		if (session.getAttribute("uname") == null)
+			response.sendRedirect("error.jsp");
+	
 		List<Classes> clist = ClassList.getClassList("from Classes order by classId");
 		request.setAttribute("clslist", clist);
 	

@@ -13,6 +13,9 @@
 </head>
 <body>
 	<%
+		if (session.getAttribute("uname") == null)
+			response.sendRedirect("error.jsp");
+	
 		List<Subject> slist = ClassList.getSubjectList("from Subject");
 		request.setAttribute("subjects", slist);
 	%>

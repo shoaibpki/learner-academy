@@ -17,6 +17,9 @@
 <body>
 	<h3>Assign Class to subjects</h3>
 	<%
+		if (session.getAttribute("uname") == null)
+			response.sendRedirect("error.jsp");
+		
 		List<Classes> clist = ClassList.getClassList("from Classes");
 		List<Subject> sublist = ClassList.getSubjectList("from Subject");
 		List<Teacher> teclist = ClassList.getTeacherList("from Teacher");
